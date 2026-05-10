@@ -150,6 +150,7 @@
             background: linear-gradient(135deg, var(--spc-navy) 0%, #004578 100%);
             color: var(--bg-white);
             position: relative;
+            padding-top: 2rem; /* Added padding to accommodate avatar */
         }
 
         /* Subtle background pattern */
@@ -167,6 +168,19 @@
             max-width: 800px;
             position: relative;
             z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--spc-teal);
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            object-fit: cover;
         }
 
         .hero h1 {
@@ -486,6 +500,7 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
+                <img src="https://avatars.githubusercontent.com/u/283457090?s=48&v=4" alt="Victor Meza" class="hero-avatar">
                 <div class="hero-tag">Course Portfolio</div>
                 <h1>Generative AI for <br><span class="text-teal">Work & Research</span></h1>
                 <p>Exploring the powerful intersection of International Agricultural Development, organic production, and modern automation tools.</p>
