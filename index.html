@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
@@ -25,690 +26,700 @@
             --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+```
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-white);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-white);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
 
-        /* === TYPOGRAPHY & UTILITIES === */
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            color: var(--spc-navy);
-            letter-spacing: -0.5px;
-        }
+    /* === TYPOGRAPHY & UTILITIES === */
+    h1, h2, h3, h4 {
+        font-weight: 700;
+        color: var(--spc-navy);
+        letter-spacing: -0.5px;
+    }
 
-        .text-accent {
-            color: var(--spc-blue);
-        }
+    .text-accent {
+        color: var(--spc-blue);
+    }
 
-        .text-teal {
-            color: var(--spc-teal);
-        }
+    .text-teal {
+        color: var(--spc-teal);
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 0.875rem 2rem;
-            border-radius: 4px; /* Squarer institutional buttons */
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.9rem;
-        }
+    .btn {
+        display: inline-block;
+        padding: 0.875rem 2rem;
+        border-radius: 4px; /* Squarer institutional buttons */
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+    }
 
-        .btn-primary {
-            background-color: var(--spc-teal);
-            color: white;
-            border: 2px solid var(--spc-teal);
-        }
+    .btn-primary {
+        background-color: var(--spc-teal);
+        color: white;
+        border: 2px solid var(--spc-teal);
+    }
 
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--spc-teal);
-        }
+    .btn-primary:hover {
+        background-color: transparent;
+        color: var(--spc-teal);
+    }
 
-        /* === NAVIGATION === */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--bg-white);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+    /* === NAVIGATION === */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: var(--bg-white);
+        border-bottom: 1px solid var(--border-color);
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
 
-        .logo {
-            font-weight: 800;
-            font-size: 1.4rem;
-            color: var(--spc-navy);
-            text-decoration: none;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .logo {
+        font-weight: 800;
+        font-size: 1.4rem;
+        color: var(--spc-navy);
+        text-decoration: none;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-        .logo-mark {
-            width: 30px;
-            height: 30px;
-            background-color: var(--spc-teal);
-            display: inline-block;
-            border-radius: 2px;
-        }
+    .logo-mark {
+        width: 30px;
+        height: 30px;
+        background-color: var(--spc-teal);
+        display: inline-block;
+        border-radius: 2px;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+    }
 
-        .nav-links a {
-            color: var(--spc-navy);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-            text-transform: uppercase;
-        }
+    .nav-links a {
+        color: var(--spc-navy);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: color 0.2s ease;
+        text-transform: uppercase;
+    }
 
-        .nav-links a:hover {
-            color: var(--spc-blue);
-        }
+    .nav-links a:hover {
+        color: var(--spc-blue);
+    }
 
-        /* === HERO SECTION === */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            margin-top: 80px;
-            background: linear-gradient(135deg, var(--spc-navy) 0%, #004578 100%);
-            color: var(--bg-white);
-            position: relative;
-            padding-top: 2rem; /* Added padding to accommodate avatar */
-        }
+    /* === HERO SECTION === */
+    .hero {
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+        background: linear-gradient(135deg, var(--spc-navy) 0%, #004578 100%);
+        color: var(--bg-white);
+        position: relative;
+        padding-top: 2rem; /* Added padding to accommodate avatar */
+    }
 
-        /* Subtle background pattern */
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.5;
-            pointer-events: none;
-        }
+    /* Subtle background pattern */
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.5;
+        pointer-events: none;
+    }
 
-        .hero-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    .hero-content {
+        max-width: 800px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-        .hero-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid var(--spc-teal);
-            margin-bottom: 2rem;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            object-fit: cover;
-        }
+    .hero-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid var(--spc-teal);
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        object-fit: cover;
+    }
 
-        .hero h1 {
-            color: var(--bg-white);
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
+    .hero h1 {
+        color: var(--bg-white);
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+    }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: #e2e8f0;
-            margin-bottom: 2.5rem;
-            max-width: 650px;
-            font-weight: 300;
-        }
+    .hero p {
+        font-size: 1.25rem;
+        color: #e2e8f0;
+        margin-bottom: 2.5rem;
+        max-width: 650px;
+        font-weight: 300;
+    }
 
-        .hero-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-left: 4px solid var(--spc-teal);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-        }
+    .hero-tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.5rem 1rem;
+        border-left: 4px solid var(--spc-teal);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+    }
 
-        /* === SECTIONS === */
-        section {
-            padding: 6rem 0;
-        }
+    /* === SECTIONS === */
+    section {
+        padding: 6rem 0;
+    }
 
-        .bg-gray {
-            background-color: var(--bg-body);
-        }
+    .bg-gray {
+        background-color: var(--bg-body);
+    }
 
-        .section-header {
-            margin-bottom: 4rem;
-            text-align: center;
-        }
+    .section-header {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
 
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
+    .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+    }
 
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background-color: var(--spc-teal);
-        }
+    .section-header h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background-color: var(--spc-teal);
+    }
 
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-        }
+    .section-header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
 
-        /* === ABOUT SECTION === */
+    /* === ABOUT SECTION === */
+    .about-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .about-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--spc-navy);
+    }
+
+    .about-text p {
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+    }
+
+    .sidebar-card {
+        background: var(--bg-white);
+        padding: 2.5rem;
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+        border-top: 4px solid var(--spc-navy);
+    }
+
+    .sidebar-card h4 {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .skill-tag {
+        background: var(--bg-body);
+        border: 1px solid var(--border-color);
+        padding: 0.4rem 1rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        color: var(--spc-navy);
+        font-weight: 500;
+    }
+
+    .skill-tag.highlight {
+        background: rgba(0, 169, 157, 0.1);
+        color: var(--spc-teal);
+        border-color: rgba(0, 169, 157, 0.2);
+    }
+
+    /* === COURSE SECTION === */
+    .course-card {
+        background: var(--bg-white);
+        padding: 4rem;
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+        border-left: 5px solid var(--spc-blue);
+    }
+
+    .course-intro {
+        max-width: 800px;
+        margin-bottom: 3rem;
+    }
+
+    .course-intro h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--spc-navy);
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .feature-item {
+        text-align: left;
+    }
+
+    .feature-item h4 {
+        color: var(--spc-blue);
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-item p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+    }
+
+    /* === SUBMISSIONS SECTION === */
+    .submissions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .submission-card {
+        background: var(--bg-white);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 2.5rem;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .submission-card::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        height: 4px;
+        background-color: var(--spc-navy);
+        border-radius: 8px 8px 0 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .submission-card:hover {
+        box-shadow: var(--hover-shadow);
+        transform: translateY(-5px);
+    }
+
+    .submission-card:hover::before {
+        background-color: var(--spc-teal);
+    }
+
+    .week-badge {
+        display: inline-block;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+
+    .submission-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+
+    .submission-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        flex-grow: 1;
+        margin-bottom: 2rem;
+    }
+
+    .submission-link {
+        display: inline-flex;
+        align-items: center;
+        color: var(--spc-blue);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
+        margin-top: auto;
+    }
+
+    .submission-link:hover {
+        color: var(--spc-navy);
+    }
+
+    .submission-link span {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .submission-link:hover span {
+        transform: translateX(5px);
+    }
+
+    .status-pending {
+        color: #94a3b8;
+        font-style: italic;
+        cursor: default;
+    }
+    
+    .status-pending:hover {
+        color: #94a3b8;
+    }
+    
+    .status-pending:hover span {
+        transform: none;
+    }
+
+    /* === CONSULTATION FORM SECTION === */
+    .consultation-card {
+        background: var(--bg-white);
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+        border-top: 5px solid var(--spc-teal);
+        padding: 2rem;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .form-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 6px;
+    }
+
+    .form-wrapper iframe {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-height: 777px;
+        border: 0;
+    }
+
+    /* === FOOTER === */
+    footer {
+        background-color: var(--spc-navy);
+        color: white;
+        text-align: center;
+        padding: 3rem 0;
+        font-size: 0.95rem;
+    }
+    
+    footer p {
+        opacity: 0.8;
+    }
+
+    /* === RESPONSIVE DESIGN === */
+    @media (max-width: 900px) {
         .about-grid {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 4rem;
-            align-items: start;
+            grid-template-columns: 1fr;
         }
+    }
 
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--spc-navy);
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 3rem;
         }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+        .nav-links {
+            display: none;
         }
-
-        .sidebar-card {
-            background: var(--bg-white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: var(--card-shadow);
-            border-top: 4px solid var(--spc-navy);
-        }
-
-        .sidebar-card h4 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-tag {
-            background: var(--bg-body);
-            border: 1px solid var(--border-color);
-            padding: 0.4rem 1rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: var(--spc-navy);
-            font-weight: 500;
-        }
-
-        .skill-tag.highlight {
-            background: rgba(0, 169, 157, 0.1);
-            color: var(--spc-teal);
-            border-color: rgba(0, 169, 157, 0.2);
-        }
-
-        /* === COURSE SECTION === */
         .course-card {
-            background: var(--bg-white);
-            padding: 4rem;
-            border-radius: 8px;
-            box-shadow: var(--card-shadow);
-            border-left: 5px solid var(--spc-blue);
-        }
-
-        .course-intro {
-            max-width: 800px;
-            margin-bottom: 3rem;
-        }
-
-        .course-intro h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--spc-navy);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-item {
-            text-align: left;
-        }
-
-        .feature-item h4 {
-            color: var(--spc-blue);
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-item p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* === SUBMISSIONS SECTION === */
-        .submissions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .submission-card {
-            background: var(--bg-white);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
             padding: 2.5rem;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            position: relative;
         }
-
-        .submission-card::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            height: 4px;
-            background-color: var(--spc-navy);
-            border-radius: 8px 8px 0 0;
-            transition: background-color 0.3s ease;
-        }
-
-        .submission-card:hover {
-            box-shadow: var(--hover-shadow);
-            transform: translateY(-5px);
-        }
-
-        .submission-card:hover::before {
-            background-color: var(--spc-teal);
-        }
-
-        .week-badge {
-            display: inline-block;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .submission-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .submission-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            flex-grow: 1;
-            margin-bottom: 2rem;
-        }
-
-        .submission-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--spc-blue);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-            margin-top: auto;
-        }
-
-        .submission-link:hover {
-            color: var(--spc-navy);
-        }
-
-        .submission-link span {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .submission-link:hover span {
-            transform: translateX(5px);
-        }
-
-        .status-pending {
-            color: #94a3b8;
-            font-style: italic;
-            cursor: default;
-        }
-        
-        .status-pending:hover {
-            color: #94a3b8;
-        }
-        
-        .status-pending:hover span {
-            transform: none;
-        }
-
-        /* === CONSULTATION FORM SECTION === */
         .consultation-card {
-            background: var(--bg-white);
-            border-radius: 8px;
-            box-shadow: var(--card-shadow);
-            border-top: 5px solid var(--spc-teal);
-            padding: 2rem;
-            max-width: 760px;
-            margin: 0 auto;
+            padding: 1rem;
         }
+    }
+</style>
+```
 
-        .form-wrapper {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 6px;
-        }
-
-        .form-wrapper iframe {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            min-height: 777px;
-            border: 0;
-        }
-
-        /* === FOOTER === */
-        footer {
-            background-color: var(--spc-navy);
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-            font-size: 0.95rem;
-        }
-        
-        footer p {
-            opacity: 0.8;
-        }
-
-        /* === RESPONSIVE DESIGN === */
-        @media (max-width: 900px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .nav-links {
-                display: none;
-            }
-            .course-card {
-                padding: 2.5rem;
-            }
-            .consultation-card {
-                padding: 1rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-mark"></span>
-               Amerita Ravuvu
-            </a>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#course">The Course</a></li>
-                <li><a href="#submissions">Submissions</a></li>
-                <li><a href="#consultation">Consultation</a></li>
-            </ul>
-        </div>
-    </nav>
+```
+<!-- Navigation -->
+<nav>
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <span class="logo-mark"></span>
+           Amerita Ravuvu
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#course">The Course</a></li>
+            <li><a href="#submissions">Submissions</a></li>
+            <li><a href="#consultation">Consultation</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="Optimised%201.jpg"
-     alt="Amerita Ravuvu"
-     class="hero-avatar">
-                <div class="hero-tag">Course Portfolio</div>
-                <h1>Generative AI for <br><span class="text-teal">Work & Research</span></h1>
-                <p>Exploring the powerful intersection of International Agricultural Development, organic production, and modern automation tools.</p>
-                <a href="#submissions" class="btn btn-primary">View My Work</a>
-            </div>
+<!-- Hero Section -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <img src="Optimised%201.jpg"
+ alt="Amerita Ravuvu"
+ class="hero-avatar">
+            <div class="hero-tag">Course Portfolio</div>
+            <h1>Generative AI for <br><span class="text-teal">Work & Research</span></h1>
+            <p>Exploring the powerful intersection of International Agricultural Development, organic production, and modern automation tools.</p>
+            <a href="#submissions" class="btn btn-primary">View My Work</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Bridging Agriculture & <span class="text-accent">Technology</span></h3>
-                    <p>I am an undergraduate student at the University of California, Davis, pursuing a Bachelor of Science in <strong>International Agriculture Development</strong> (Expected June 2026).</p>
-                    <p>My passion lies in small-scale organic vegetable production and botanical science. Alongside my studies, I run <em>Plants4You</em>, a successful online shop specializing in propagating and selling carnivorous and drought-resistant plants. I also give back to my community by volunteering at the Knights Landing One Health Center, providing operational support and Tagalog interpretation.</p>
-                    <p>I am now exploring how Artificial Intelligence can streamline research, data management, and operational workflows within the agricultural and health sectors.</p>
-                </div>
-                
-                <div class="sidebar-card">
-                    <h4>Core Skills & Focus Areas</h4>
-                    <div class="skills-container">
-                        <span class="skill-tag">Agricultural Development</span>
-                        <span class="skill-tag">Botany & Plant Physiology</span>
-                        <span class="skill-tag">Organic Cultivation</span>
-                        <span class="skill-tag">Inventory Management</span>
-                        <span class="skill-tag">Data Collection</span>
-                        <span class="skill-tag">Bilingual (Tagalog/English)</span>
-                        <span class="skill-tag highlight">Generative AI Applications</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Course Section -->
-    <section id="course" class="bg-gray">
-        <div class="container">
-            <div class="section-header">
-                <h2>About the Course</h2>
-                <p>Generative AI for Work & Research by The GRAPH Courses</p>
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Bridging Agriculture & <span class="text-accent">Technology</span></h3>
+                <p>I am an undergraduate student at the University of California, Davis, pursuing a Bachelor of Science in <strong>International Agriculture Development</strong> (Expected June 2026).</p>
+                <p>My passion lies in small-scale organic vegetable production and botanical science. Alongside my studies, I run <em>Plants4You</em>, a successful online shop specializing in propagating and selling carnivorous and drought-resistant plants. I also give back to my community by volunteering at the Knights Landing One Health Center, providing operational support and Tagalog interpretation.</p>
+                <p>I am now exploring how Artificial Intelligence can streamline research, data management, and operational workflows within the agricultural and health sectors.</p>
             </div>
             
-            <div class="course-card">
-                <div class="course-intro">
-                    <h3>No-Code AI Tools for Responsible Task Automation</h3>
-                    <p>This 8-week live cohort course focuses on harnessing Large Language Models (LLMs) to enhance productivity in research and professional environments. It emphasizes responsible generation of text for papers, creating structured documents, building simple research websites, and utilizing AI-automated data analysis.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <h4>8 Weeks</h4>
-                        <p>Guided Live Workshops & Help Sessions</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>No-Code</h4>
-                        <p>Accessible AI Tooling for All Backgrounds</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Automation</h4>
-                        <p>Data, Document & Workflow Optimization</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Capstone</h4>
-                        <p>Real-world Research Project Application</p>
-                    </div>
+            <div class="sidebar-card">
+                <h4>Core Skills & Focus Areas</h4>
+                <div class="skills-container">
+                    <span class="skill-tag">Agricultural Development</span>
+                    <span class="skill-tag">Botany & Plant Physiology</span>
+                    <span class="skill-tag">Organic Cultivation</span>
+                    <span class="skill-tag">Inventory Management</span>
+                    <span class="skill-tag">Data Collection</span>
+                    <span class="skill-tag">Bilingual (Tagalog/English)</span>
+                    <span class="skill-tag highlight">Generative AI Applications</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Submissions Section -->
-    <section id="submissions">
-        <div class="container">
-            <div class="section-header">
-                <h2>Weekly Submissions</h2>
-                <p>Tracking my progress and projects throughout the 8-week bootcamp.</p>
+<!-- Course Section -->
+<section id="course" class="bg-gray">
+    <div class="container">
+        <div class="section-header">
+            <h2>About the Course</h2>
+            <p>Generative AI for Work & Research by The GRAPH Courses</p>
+        </div>
+        
+        <div class="course-card">
+            <div class="course-intro">
+                <h3>No-Code AI Tools for Responsible Task Automation</h3>
+                <p>This 8-week live cohort course focuses on harnessing Large Language Models (LLMs) to enhance productivity in research and professional environments. It emphasizes responsible generation of text for papers, creating structured documents, building simple research websites, and utilizing AI-automated data analysis.</p>
             </div>
 
-            <div class="submissions-grid">
-                <!-- Week 1 -->
-                <div class="submission-card">
-                    <span class="week-badge">Module 1</span>
-                    <h3>Websites, Docs & Presentations</h3>
-                    <p>Generating text responsibly for research, formatting documents efficiently with Markdown, and building this simple research portfolio website.</p>
-                    <a href="#" class="submission-link">View Details <span>&rarr;</span></a>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>8 Weeks</h4>
+                    <p>Guided Live Workshops & Help Sessions</p>
                 </div>
-
-                <!-- Week 2 -->
-                <div class="submission-card">
-                    <span class="week-badge">Module 2</span>
-                    <h3>Workshop 2: Automated Data Analysis</h3>
-                    <p>Analyzing Gapminder data to explore relationships between two global indicators using AI-assisted data analysis tools.</p>
-                    <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Workshop%202_AI%20Assisted%20Data%20Analysis_Amerita%20Ravuvu.pdf" class="submission-link" target="_blank" rel="noopener noreferrer">View Report <span>&rarr;</span></a>
+                <div class="feature-item">
+                    <h4>No-Code</h4>
+                    <p>Accessible AI Tooling for All Backgrounds</p>
                 </div>
-
-                <!-- Week 3 -->
-                <div class="submission-card">
-                    <span class="week-badge">Module 3</span>
-                    <h3>Workshop 3: Job Market Data Analysis</h3>
-                    <p>Using LLMs in Google Sheets to extract information from job postings, then analyzing the data with AI tools to explore relationships between experience requirements, programming languages, and salaries.</p>
-                    <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Workshop%203_Analysing%20Job%20Market%20Data%20with%20LLMs%20in%20Sheets%20and%20AI%20Reporting%20Tools_Amerita%20Ravuvu.pdf" class="submission-link" target="_blank" rel="noopener noreferrer">View Report <span>&rarr;</span></a>
+                <div class="feature-item">
+                    <h4>Automation</h4>
+                    <p>Data, Document & Workflow Optimization</p>
                 </div>
-
-                <!-- Week 4 -->
-                <div class="submission-card">
-                    <span class="week-badge">Module 4</span>
-                    <h3>Workshop 4: Building a Custom Website Chatbot | AIW 2026 T2</h3>
-                    <p>Built and deployed a custom website chatbot and explored AI-powered workflows for extracting and analyzing information from job postings. Using LLMs in Google Sheets, I extracted structured data from job advertisements and used AI analysis tools to investigate relationships between experience requirements, programming languages, and salary levels.</p>
-                    <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Amerita%20Ravuvu_Workshop%204.pdf"
-                       class="submission-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View Report <span>&rarr;</span>
-                    </a>
-                </div>
-
-                <!-- Week 5 -->
-                <div class="submission-card">
-                    <span class="week-badge">Module 5</span>
-                    <h3>Data Visualization Generation</h3>
-                    <p>Leveraging AI tools to transform agricultural and clinical data into compelling, readable charts and graphs.</p>
-                    <span class="submission-link status-pending">Coming Soon...</span>
-                </div>
-
-                <!-- Week 6 -->
-                <div class="submission-card">
-                    <span class="week-badge">Module 6</span>
-                    <h3>Workflow Integrations</h3>
-                    <p>Connecting distinct AI tools to create a seamless, end-to-end operational pipeline for data collection.</p>
-                    <span class="submission-link status-pending">Coming Soon...</span>
-                </div>
-
-                <!-- Week 7 -->
-                <div class="submission-card">
-                    <span class="week-badge">Module 7</span>
-                    <h3>Ethics & Responsible AI</h3>
-                    <p>Analyzing the limitations, biases, and data privacy concerns when deploying AI in health and research contexts.</p>
-                    <span class="submission-link status-pending">Coming Soon...</span>
-                </div>
-
-                <!-- Week 8 -->
-                <div class="submission-card" style="border-left: 4px solid var(--spc-teal);">
-                    <span class="week-badge text-teal">Final</span>
-                    <h3>Capstone Project</h3>
-                    <p>A comprehensive final project demonstrating the integration of AI tools into a practical agricultural or research workflow.</p>
-                    <span class="submission-link status-pending">Coming Soon...</span>
+                <div class="feature-item">
+                    <h4>Capstone</h4>
+                    <p>Real-world Research Project Application</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact for Consultation Section -->
-    <section id="consultation" class="bg-gray">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact for Consultation</h2>
-                <p>Please complete the form below to get in touch about consultation opportunities.</p>
+<!-- Submissions Section -->
+<section id="submissions">
+    <div class="container">
+        <div class="section-header">
+            <h2>Weekly Submissions</h2>
+            <p>Tracking my progress and projects throughout the 8-week bootcamp.</p>
+        </div>
+
+        <div class="submissions-grid">
+            <!-- Week 1 -->
+            <div class="submission-card">
+                <span class="week-badge">Module 1</span>
+                <h3>Websites, Docs & Presentations</h3>
+                <p>Generating text responsibly for research, formatting documents efficiently with Markdown, and building this simple research portfolio website.</p>
+                <a href="#" class="submission-link">View Details <span>&rarr;</span></a>
             </div>
 
-            <div class="consultation-card">
-                <div class="form-wrapper">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe38l8dP-gSEBAnxqX6C2LJ3_7FXlj_o9k2O2mEhE6aWf_n9Q/viewform?embedded=true" width="640" height="777" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                </div>
+            <!-- Week 2 -->
+            <div class="submission-card">
+                <span class="week-badge">Module 2</span>
+                <h3>Workshop 2: Automated Data Analysis</h3>
+                <p>Analyzing Gapminder data to explore relationships between two global indicators using AI-assisted data analysis tools.</p>
+                <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Workshop%202_AI%20Assisted%20Data%20Analysis_Amerita%20Ravuvu.pdf" class="submission-link" target="_blank" rel="noopener noreferrer">View Report <span>&rarr;</span></a>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="submission-card">
+                <span class="week-badge">Module 3</span>
+                <h3>Workshop 3: Job Market Data Analysis</h3>
+                <p>Using LLMs in Google Sheets to extract information from job postings, then analyzing the data with AI tools to explore relationships between experience requirements, programming languages, and salaries.</p>
+                <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Workshop%203_Analysing%20Job%20Market%20Data%20with%20LLMs%20in%20Sheets%20and%20AI%20Reporting%20Tools_Amerita%20Ravuvu.pdf" class="submission-link" target="_blank" rel="noopener noreferrer">View Report <span>&rarr;</span></a>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="submission-card">
+                <span class="week-badge">Module 4</span>
+                <h3>Workshop 4: Building a Custom Website Chatbot | AIW 2026 T2</h3>
+                <p>Built and deployed a custom website chatbot and explored AI-powered workflows for extracting and analyzing information from job postings. Using LLMs in Google Sheets, I extracted structured data from job advertisements and used AI analysis tools to investigate relationships between experience requirements, programming languages, and salary levels.</p>
+                <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Amerita%20Ravuvu_Workshop%204.pdf"
+                   class="submission-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Report <span>&rarr;</span>
+                </a>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="submission-card">
+                <span class="week-badge">Module 5</span>
+                <h3>Workshop 5: Data Visualization Generation</h3>
+                <p>Ran an automated Relay.app workflow that generated a Generative AI Opportunities Report from a contact-form submission. The workflow completed five sequential steps, transforming the input into a final HTML report that was emailed to me.</p>
+                <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Completed%20Workflow%20in%20relay.app.pdf"
+                   class="submission-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Report <span>&rarr;</span>
+                </a>
+            </div>
+
+            <!-- Week 6 -->
+            <div class="submission-card">
+                <span class="week-badge">Module 6</span>
+                <h3>Workflow Integrations</h3>
+                <p>Connecting distinct AI tools to create a seamless, end-to-end operational pipeline for data collection.</p>
+                <span class="submission-link status-pending">Coming Soon...</span>
+            </div>
+
+            <!-- Week 7 -->
+            <div class="submission-card">
+                <span class="week-badge">Module 7</span>
+                <h3>Ethics & Responsible AI</h3>
+                <p>Analyzing the limitations, biases, and data privacy concerns when deploying AI in health and research contexts.</p>
+                <span class="submission-link status-pending">Coming Soon...</span>
+            </div>
+
+            <!-- Week 8 -->
+            <div class="submission-card" style="border-left: 4px solid var(--spc-teal);">
+                <span class="week-badge text-teal">Final</span>
+                <h3>Capstone Project</h3>
+                <p>A comprehensive final project demonstrating the integration of AI tools into a practical agricultural or research workflow.</p>
+                <span class="submission-link status-pending">Coming Soon...</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Amerita Ravuvu. Crafted for the Generative AI for Work & Research Course.</p>
+<!-- Contact for Consultation Section -->
+<section id="consultation" class="bg-gray">
+    <div class="container">
+        <div class="section-header">
+            <h2>Contact for Consultation</h2>
+            <p>Please complete the form below to get in touch about consultation opportunities.</p>
         </div>
-    </footer>
+
+        <div class="consultation-card">
+            <div class="form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe38l8dP-gSEBAnxqX6C2LJ3_7FXlj_o9k2O2mEhE6aWf_n9Q/viewform?embedded=true" width="640" height="777" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Amerita Ravuvu. Crafted for the Generative AI for Work & Research Course.</p>
+    </div>
+</footer>
+```
 
 </body>
 </html>
