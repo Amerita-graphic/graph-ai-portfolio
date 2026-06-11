@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/05/31/17/20260531172635-TCTXWFQQ.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2026/05/31/17/20260531172635-TCTXWFQQ.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Amerita Ravuvu | AI & Research Portfolio</title>
@@ -448,6 +448,32 @@
             transform: none;
         }
 
+        /* === CONSULTATION FORM SECTION === */
+        .consultation-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border-top: 5px solid var(--spc-teal);
+            padding: 2rem;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .form-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .form-wrapper iframe {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            min-height: 777px;
+            border: 0;
+        }
+
         /* === FOOTER === */
         footer {
             background-color: var(--spc-navy);
@@ -478,6 +504,9 @@
             .course-card {
                 padding: 2.5rem;
             }
+            .consultation-card {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -494,6 +523,7 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#course">The Course</a></li>
                 <li><a href="#submissions">Submissions</a></li>
+                <li><a href="#consultation">Consultation</a></li>
             </ul>
         </div>
     </nav>
@@ -611,16 +641,16 @@
 
                 <!-- Week 4 -->
                 <div class="submission-card">
-    <span class="week-badge">Module 4</span>
-    <h3>Workshop 4: Building a Custom Website Chatbot | AIW 2026 T2</h3>
-    <p>Built and deployed a custom website chatbot and explored AI-powered workflows for extracting and analyzing information from job postings. Using LLMs in Google Sheets, I extracted structured data from job advertisements and used AI analysis tools to investigate relationships between experience requirements, programming languages, and salary levels.</p>
-    <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Amerita%20Ravuvu_Workshop%204.pdf"
-       class="submission-link"
-       target="_blank"
-       rel="noopener noreferrer">
-        View Report <span>&rarr;</span>
-    </a>
-</div>
+                    <span class="week-badge">Module 4</span>
+                    <h3>Workshop 4: Building a Custom Website Chatbot | AIW 2026 T2</h3>
+                    <p>Built and deployed a custom website chatbot and explored AI-powered workflows for extracting and analyzing information from job postings. Using LLMs in Google Sheets, I extracted structured data from job advertisements and used AI analysis tools to investigate relationships between experience requirements, programming languages, and salary levels.</p>
+                    <a href="https://github.com/Amerita-graphic/graph-ai-portfolio/blob/main/Amerita%20Ravuvu_Workshop%204.pdf"
+                       class="submission-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Report <span>&rarr;</span>
+                    </a>
+                </div>
 
                 <!-- Week 5 -->
                 <div class="submission-card">
@@ -652,6 +682,22 @@
                     <h3>Capstone Project</h3>
                     <p>A comprehensive final project demonstrating the integration of AI tools into a practical agricultural or research workflow.</p>
                     <span class="submission-link status-pending">Coming Soon...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact for Consultation Section -->
+    <section id="consultation" class="bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact for Consultation</h2>
+                <p>Please complete the form below to get in touch about consultation opportunities.</p>
+            </div>
+
+            <div class="consultation-card">
+                <div class="form-wrapper">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe38l8dP-gSEBAnxqX6C2LJ3_7FXlj_o9k2O2mEhE6aWf_n9Q/viewform?embedded=true" width="640" height="777" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </div>
         </div>
